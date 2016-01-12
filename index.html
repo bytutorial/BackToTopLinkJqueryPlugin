@@ -27,7 +27,7 @@
 		
 		pre{
 			background:#3e3b3b;
-			color:#fff;
+			color:#f3f275;
 			padding:10px;
 		}
 		
@@ -38,19 +38,23 @@
 
 </head>
 <body>
-<p>After creating back to top link article, I decided to create a simple JQuery plugin to help web masters and web designers to achieve this goal easily. The idea is to minimize their work by not modifying the content too much on their site. They can just simply copy the plugin link and run the required script with optional parameters.</p>
+<h3>Back to top link jquery plugin</h3>
+<p>After creating <a href='https://bytutorial.com/blogs/jquery/how-to-create-back-to-top-link-using-css-and-jquery' target='_blank'>back to top link article</a>, I decided to create a simple JQuery plugin to help web masters and web designers to achieve this goal easily. The idea is to minimize their work by not modifying the content too much on their site. They can just simply copy the plugin link and run the required script with optional parameters.</p>
+
+<h3>Demo of the back to top link</h3>
+<p>Simply scroll down this page content and you will see a button appears located on the bottom right side.</p>
 
 <p>How does Back to Top Link work?</p>
 <p>Pretty simple, what you need to do is to place the backtotoplink.js file into your site content. Remember because this script requires JQuery framework library, it needs to be placed after JQuery file. Please make sure the path of the link is correctly placed.</p>
 
 <pre>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="jquery.backtotoplink.js"></script>
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.backtotoplink.min.js&quot;&gt;&lt;/script&gt;
 </pre>
 
 <p>To run the script simple, run the following function.</p>
 <pre>
-	$.backToTopLink();
+$.backToTopLink();
 </pre>
 
 <h3>Option Parameters</h3>
@@ -179,26 +183,27 @@
 
 <p>The following example will create a rounded link navigator and will position it on the left bottom rather than right bottom.</p>
 <pre>
-	$.backToTopLink({
-		navigatorPosition: 'lb',
-		navigatorBorderRadius: '100%'
-	});
+$.backToTopLink({
+	navigatorPosition: &#39;lb&#39;,
+	navigatorBorderRadius: &#39;100%&#39;
+});
 </pre>
 
 <p>The following example will use an external image source.</p>
 <pre>
-	$.backToTopLink({
-		arrowImgSrc: '/images/arrowtop.png',
-		arrowImgMarginTop: 5
-	});
+$.backToTopLink({
+	arrowImgSrc: &#39;/images/arrowtop.png&#39;,
+	arrowImgMarginTop: 5
+});
+&lt;/pre&gt;
 </pre>
 
 <h3>License</h3>
 <p>This JQuery plugin is licensed under MIT. For more information about the plugin, please visit on our site at:
-<a href='https://bytutorial.com/scripts-and-framework/backtotoplink-jquery-plugin' target="_blank">https://bytutorial.com/scripts-and-framework/backtotoplink-jquery-plugin</a>
+<a href='https://bytutorial.com/framework-and-scripts-library/backtotoplink-jquery-plugin' target="_blank">Back to top link Jquery plugin</a>
 </p>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="jquery.backtotoplink.js"></script>
+<script src="jquery.backtotoplink.min.js"></script>
 <script>
 	$.backToTopLink({});
 </script>

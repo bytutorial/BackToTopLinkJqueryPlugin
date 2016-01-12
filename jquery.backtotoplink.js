@@ -2,7 +2,7 @@
 jquery.backtotoplink.js v1.0.0
 Licensed under MIT
 copyright 2016 andy suwandy
-https://bytutorial.com/scripts-and-framework/backtotoplink-jquery-plugin
+https://bytutorial.com/framework-and-scripts-library/backtotoplink-jquery-plugin
 https://github.com/bytutorial
 ****/
 (function ($) {
