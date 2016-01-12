@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		html,body{
+			font-family:Arial;
+			font-size:100%;
+		}
+		
+		.tbl-example tr{
+			background:#000;
+		}
+		
+		.tbl-example tr.trheader td{
+			color:#fff;
+			background:#000;
+		}
+		
+		.tbl-example tr:nth-child(even){
+			background: #CCC;
+		}
+		
+		.tbl-example tr:nth-child(odd){
+			background: #FFF;
+		}
+		
+		pre{
+			background:#3e3b3b;
+			color:#fff;
+			padding:10px;
+		}
+		
+		.tbl-example td{
+			padding:3px 10px;
+		}
+	</style>
+
+</head>
+<body>
+<p>After creating back to top link article, I decided to create a simple JQuery plugin to help web masters and web designers to achieve this goal easily. The idea is to minimize their work by not modifying the content too much on their site. They can just simply copy the plugin link and run the required script with optional parameters.</p>
+
+<p>How does Back to Top Link work?</p>
+<p>Pretty simple, what you need to do is to place the backtotoplink.js file into your site content. Remember because this script requires JQuery framework library, it needs to be placed after JQuery file. Please make sure the path of the link is correctly placed.</p>
+
+<pre>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="jquery.backtotoplink.js"></script>
+</pre>
+
+<p>To run the script simple, run the following function.</p>
+<pre>
+	$.backToTopLink();
+</pre>
+
+<h3>Option Parameters</h3>
+<p>You have the following option parameters to play with. Please see the available options below.</p>
+<div class="table-responsive">
+	<table class="tbl-example">
+		<tr class="trheader">
+			<td>Option Name</td>
+			<td>Default value</td>
+			<td>Description</td>
+		</tr>
+		<tr>
+			<td>navigatorZIndex</td>
+			<td>999999</td>
+			<td>
+				<p>This represent the position z-index of the navigator link itself. By default html tag object will have z-index 0 value on it. You can read more information of it in our <a href='https://bytutorial.com/tutorials/css/css-z-index' target='_blank' title='Learn css z-index'>CSS z-index tutorial</a>.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorBorderRadius</td>
+			<td>20%</td>
+			<td>
+				<p>The border radius of the navigator link. By default it is set 20% which will form a square rounded border radius on the navigator link. You can read more information about border radius on our <a href='https://bytutorial.com/tutorials/css3/css3-border-radius' target='_blank' title='Learn css3 border radius'>CSS3 border-radius tutorial</a>.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorBgcolor</td>
+			<td>#000</td>
+			<td>
+				<p>The background color of the navigator link. You can read more information about how the background color work on our <a href='https://bytutorial.com/tutorials/css/css-background' target='_blank' title='Learn css3 border radius'>CSS background tutorial</a>.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorBgcolorHover</td>
+			<td>#000</td>
+			<td>
+				<p>This will be the hover background color. By default it is set to the same color of the navigator background color. Hover in this case means you mouse over the top of the link.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorOpacity</td>
+			<td>#000</td>
+			<td>
+				<p>This will be the hover background color. By default it is set to the same color of the navigator background color. Hover in this case means you mouse over the top of the link.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorWidth</td>
+			<td>30</td>
+			<td>
+				<p>The width of the navigator link.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorHeight</td>
+			<td>30</td>
+			<td>
+				<p>The height of the navigator link.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorPadding</td>
+			<td>30</td>
+			<td>
+				<p>The padding of the navigator link.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorPosition</td>
+			<td>rb</td>
+			<td>
+				<p>The position of the navigator link. rb represents right bottom while lb represents left bottom.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>navigatorPosPercent</td>
+			<td>3</td>
+			<td>
+				<p>The position percentage for navigator position. If you set to 5 and navigatorPosition is rb. It means it will set right:5% and bottom:5% for the navigator link.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>arrowImgSrc</td>
+			<td>&#160;</td>
+			<td>
+				<p>By default the source of image is empty as it is using div and css to create the arrow top.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>arrowColor</td>
+			<td>#fff</td>
+			<td>
+				<p>The color of the arrow only applies for non image arrow (div arrow only).</p>
+			</td>
+		</tr>
+		<tr>
+			<td>arrowWidth</td>
+			<td>10</td>
+			<td>
+				<p>The width of the arrow div.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>arrowMarginTop</td>
+			<td>10</td>
+			<td>
+				<p>The margin top of the arrow div.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>arrowImgMarginTop</td>
+			<td>10</td>
+			<td>
+				<p>The margin top of the arrow image.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>scrollDelay</td>
+			<td>10000</td>
+			<td>
+				<p>The scrolling delay of back to top page.</p>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<p>The following example will create a rounded link navigator and will position it on the left bottom rather than right bottom.</p>
+<pre>
+	$.backToTopLink({
+		navigatorPosition: 'lb',
+		navigatorBorderRadius: '100%'
+	});
+</pre>
+
+<p>The following example will use an external image source.</p>
+<pre>
+	$.backToTopLink({
+		arrowImgSrc: '/images/arrowtop.png',
+		arrowImgMarginTop: 5
+	});
+</pre>
+
+<h3>License</h3>
+<p>This JQuery plugin is licensed under MIT. For more information about the plugin, please visit on our site at:
+<a href='https://bytutorial.com/scripts-and-framework/backtotoplink-jquery-plugin' target="_blank">https://bytutorial.com/scripts-and-framework/backtotoplink-jquery-plugin</a>
+</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="jquery.backtotoplink.js"></script>
+<script>
+	$.backToTopLink({});
+</script>
+</body>
+</html>
